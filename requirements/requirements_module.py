@@ -7,7 +7,13 @@ class RequirementsClass:
         self.password = password
 
     def check_common_password(self):
-        common_password_list = ["123", "1234", "12345", "123456", "1234567", "12345678"]
+        common_password_list = [
+            "123",
+            "1234",
+            "12345",
+            "123456",
+            "1234567",
+            "12345678"]
 
         if any(self.password in s for s in common_password_list):
             print("This is a common password! Please type in a different password or generate one automatically")
