@@ -47,12 +47,15 @@ class Inputclass:
         while correct == False:
 
             try:
-                d = int(input("What is the day you were born? (dd)"))
+                day = input("What is the day you were born? (dd)")
+                d = int(day)
                 if d <= 31 and d >= 1:
-                    m = int(input("What month were you bought? (mm)"))
+                    month = input("What month were you born? (mm)")
+                    m = int(month)
                     if m <=12 and m >=1:
-                        year = int(input("What year were you born? (yyyy)"))
-                        if len(str(year)) == 4:
+                        year = input("What year were you born? (yyyy)")
+                        y = int(year)
+                        if len(str(y)) == 4:
                             correct = True
                         else:
                             print("Please enter a 4 character year. e.g 2000")
@@ -65,7 +68,7 @@ class Inputclass:
                 print(e)
                 print("Please input numbers for your date of birth")
 
-        return [str(d),str(m),str(year)]
+        return [day,month,year]
 
     def input_password():
         counter = True

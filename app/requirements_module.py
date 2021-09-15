@@ -11,7 +11,9 @@ class RequirementsClass(input.Inputclass):
 
 
     def check_length_of_password(self):
-        if len(self.password) < 8:
+
+
+        if len(self.password) < 8  :
             print("Please create a password with at teast 8 characters")
 
 
@@ -29,21 +31,27 @@ class RequirementsClass(input.Inputclass):
 
 
     def check_first_name_in_password(self):
-        if self.fname in self.password:
+        if self.fname.lower() in self.password.lower():
             print("Can't include your name in your password! Please lease type in a different password or generate one automatically")
 
 
     def check_last_name_in_password(self):
-        if self.lname in self.password:
+        if self.lname.lower() in self.password.lower():
             print("Can't include your last name in your password! Please lease type in a different password or generate one automatically")
 
 
     def check_date_of_birth_in_password(self):
-        date_of_birth_array = ["01", "05", "1800"]
-
-        for date in date_of_birth_array:
-            if date in self.password:
-                print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
+        #date_of_birth_array = ["01", "05", "1800"]
+        date_of_birth_array = self.birthday
+        full_date = date_of_birth_array[0]+date_of_birth_array[1]+date_of_birth_array[2]
+        half_date = date_of_birth_array[1]+date_of_birth_array[2]
+        year = date_of_birth_array[2]
+        if full_date in self.password or half_date in self.password or year in self.password:
+            print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
+        #for date in date_of_birth_array:
+        #
+        #    if date in self.password:
+        #        print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
 
 
 def main():

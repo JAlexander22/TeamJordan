@@ -16,4 +16,11 @@ if __name__ == "__main__":
 
         input.Inputclass.set_password(user,password)
 #-----------------------------------ADD the CHeCKS ON PASSWORD -------------------------------------------------------------------------------
+        print("check len")
         requirements_module.RequirementsClass.check_length_of_password(user)
+        print("check fname")
+        requirements_module.RequirementsClass.check_first_name_in_password(user)
+        print("check lname")
+        requirements_module.RequirementsClass.check_last_name_in_password(user)
+        print("check birthday")
+        requirements_module.RequirementsClass.check_date_of_birth_in_password(user)
