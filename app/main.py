@@ -3,6 +3,13 @@ import requirements_module
 import generate_passoword
 import result_token
 
+
+
+
+
+
+
+
 if __name__ == "__main__":
     user = input.Inputclass(input.Inputclass.input_fname(),input.Inputclass.input_lname(),input.Inputclass.input_birthday())
 
@@ -27,7 +34,11 @@ if __name__ == "__main__":
         requirements_module.RequirementsClass.check_date_of_birth_in_password(user)
 
 #------------------------------------------------Print out the results------------------------------------------------------------------------
-        result_token.Token_results.length_check(token)
-        result_token.Token_results.fname_check(token)
-        result_token.Token_results.lname_check(token)
-        result_token.Token_results.birthday_check(token)
+        #result_token.Token_results.length_check(token)
+        #result_token.Token_results.fname_check(token,user.fname)
+        #result_token.Token_results.lname_check(token,user.lname)
+        #result_token.Token_results.birthday_check(token)
+
+        token = result_token.Token_results.are_you_done()
+#------------------------------------------OUT oF LOOP GOODBYE ---------------------------------------------------------------------------------
+    print(f"Thank you for using the password checker {user.fname}")

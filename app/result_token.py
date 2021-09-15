@@ -32,6 +32,15 @@ class Token_results:
             print("Your password has PASSED the birthday check")
 
 
+    def are_you_done():
+        out = True
+        while out == True :
+            ans = input("Are you finsihed? Yes/No ")
+            if ans == 'Yes':
+                return False
+
+            elif ans =='No':
+                return True
 
 
 if __name__ == "__main__":
