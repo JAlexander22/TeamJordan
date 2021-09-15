@@ -7,7 +7,7 @@ class Token_results:
 
 
 
-    def length_token(chk):
+    def length_check(chk):
         if chk == False:
             print(f"The password FAILED the length check of between {req['min_length']} - {req['max_length']}")
         else:
@@ -39,13 +39,13 @@ class Token_results:
 
     def letter_check(chk):
         if chk ==False:
-            print(f"The password FAILED the birthday check. Please include at least one letter")
+            print(f"The password FAILED the letter check. Please include at least one letter")
         else:
             print("Your password has PASSED the letter check")
 
     def symbol_check(chk):
         if chk ==False:
-            print(f"The password FAILED the birthday check. Please include at least one symbol")
+            print(f"The password FAILED the symbol check. Please include at least one symbol")
         else:
             print("Your password has PASSED the symbol check")
 

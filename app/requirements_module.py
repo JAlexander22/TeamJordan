@@ -96,17 +96,17 @@ class RequirementsClass(input.Inputclass):
     def check_first_name_in_password(self):
         fname_check = True
         if self.fname.lower() in self.password:
-            print("Can't include your name in your password! Please lease type in a different password or generate one automatically")
+            #print("Can't include your name in your password! Please lease type in a different password or generate one automatically")
             fname_check = False
-
+            return fname_check
         return fname_check
 
 
     def check_last_name_in_password(self):
         lname_check = True
         if self.lname.lower() in self.password:
-            print("Can't include your last name in your password! Please lease type in a different password or generate one automatically")
-            last_name = False
+            #print("Can't include your last name in your password! Please lease type in a different password or generate one automatically")
+            lname_check = False
 
         return lname_check
 
@@ -128,28 +128,32 @@ class RequirementsClass(input.Inputclass):
 
     def check_date_of_birth_in_password(self):
 
+        b_check = True
 
-        date_of_birth_array = self.date_of_birth
+        date_of_birth_array = self.birthday
         full_date = date_of_birth_array[0]+date_of_birth_array[1]+date_of_birth_array[2]
         half_date = date_of_birth_array[1]+date_of_birth_array[2]
         year = date_of_birth_array[2]
         if full_date in self.password or half_date in self.password or year in self.password:
-            print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
+            #print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
+            b_check = False
+            return b_check
+        return b_check
 
 
-def main():
-    print("------------ This is the requirements module ---------------")
-
-    requirements_object = RequirementsClass("mo", "ali", "01/01/1800", "moali05~1800")
-    #print("Total characters of password: ", len(requirements_object.password))
-    requirements_object.check_length_of_password()
-    requirements_object.check_symbols_in_password()
-    requirements_object.check_characters_in_password()
-    requirements_object.check_numbers_in_password()
-    requirements_object.check_common_password()
-    requirements_object.check_first_name_in_password()
-    requirements_object.check_last_name_in_password()
-    requirements_object.check_date_of_birth_in_password()
-
-if __name__ == "__main__":
-    main()
+#def main():
+#    print("------------ This is the requirements module ---------------")
+#
+#    requirements_object = RequirementsClass("mo", "ali", "01/01/1800", "moali05~1800")
+#    #print("Total characters of password: ", len(requirements_object.password))
+#    requirements_object.check_length_of_password()
+#    requirements_object.check_symbols_in_password()
+#    requirements_object.check_characters_in_password()
+#    requirements_object.check_numbers_in_password()
+#    requirements_object.check_common_password()
+#    requirements_object.check_first_name_in_password()
+#    requirements_object.check_last_name_in_password()
+#    requirements_object.check_date_of_birth_in_password()
+#
+#if __name__ == "__main__":
+#    main()

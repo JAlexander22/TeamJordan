@@ -24,20 +24,20 @@ if __name__ == "__main__":
 
         input.Inputclass.set_password(user,password)
 #-----------------------------------ADD the CHeCKS ON PASSWORD -------------------------------------------------------------------------------
-        print("check len")
+        #print("check len")
         length_token = requirements_module.RequirementsClass.check_length_of_password(user)
-        print("check fname")
+        #print("check fname")
         fname_token = requirements_module.RequirementsClass.check_first_name_in_password(user)
-        print("check lname")
+        #print("check lname")
         lname_token = requirements_module.RequirementsClass.check_last_name_in_password(user)
-        print("check birthday")
-        birthday_tokaen = requirements_module.RequirementsClass.check_date_of_birth_in_password(user)
+        #print("check birthday")
+        birthday_token = requirements_module.RequirementsClass.check_date_of_birth_in_password(user)
 
-        print("chack numbers")
+        #print("chack numbers")
         number_token = requirements_module.RequirementsClass.check_numbers_in_password(user)
-        print("Check symbols")
+        #print("Check symbols")
         symbol_token = requirements_module.RequirementsClass.check_symbols_in_password(user)
-        print("check letters")
+        #print("check letters")
         letter_token = requirements_module.RequirementsClass.check_characters_in_password(user)
 #------------------------------------------------Print out the results------------------------------------------------------------------------
         result_token.Token_results.length_check(length_token)
