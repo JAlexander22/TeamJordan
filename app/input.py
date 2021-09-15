@@ -49,20 +49,20 @@ class Inputclass:
             try:
                 day = input("What is the day you were born? (dd)")
                 d = int(day)
-                if d <= 31 and d >= 1:
+                if d <= 31 and d >= 1 and len(day)==2:
                     month = input("What month were you born? (mm)")
                     m = int(month)
-                    if m <=12 and m >=1:
+                    if m <=12 and m >=1 and len(month)==2:
                         year = input("What year were you born? (yyyy)")
                         y = int(year)
-                        if len(str(y)) == 4:
+                        if len(year) == 4:
                             correct = True
                         else:
                             print("Please enter a 4 character year. e.g 2000")
                     else:
-                        print("Please input a month between 1-12")
+                        print("Please input a month between 01-12 with two characters")
                 else:
-                    print("please input an correct day between 1-31")
+                    print("please input an correct day between 01-31 with two characters")
 
             except Exception as e:
                 print(e)

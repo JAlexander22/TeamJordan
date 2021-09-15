@@ -46,6 +46,7 @@ class RequirementsClass(input.Inputclass):
         full_date = date_of_birth_array[0]+date_of_birth_array[1]+date_of_birth_array[2]
         half_date = date_of_birth_array[1]+date_of_birth_array[2]
         year = date_of_birth_array[2]
+        
         if full_date in self.password or half_date in self.password or year in self.password:
             print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
         #for date in date_of_birth_array:
