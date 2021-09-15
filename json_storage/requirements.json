@@ -1,0 +1,9 @@
+{
+    "length": 8,
+    "min_length": 8,
+    "max_length": 12,
+    "symbol": true,
+    "letters": true,
+    "numbers": true,
+    "capital_letters": true
+}
