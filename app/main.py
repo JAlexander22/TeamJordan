@@ -8,7 +8,12 @@ if __name__ == "__main__":
     token = True
 
     while token ==True:
-
+#---------------------------------------------GET THE PASSWORD AND STORE IT AS password-------------------------------------------------------
         password = generate_passoword.Generate_pass.generate()
         if password == None:
             password = input.Inputclass.input_password()
+
+
+        input.Inputclass.set_password(user,password)
+#-----------------------------------ADD the CHeCKS ON PASSWORD -------------------------------------------------------------------------------
+        requirements_module.RequirementsClass.check_length_of_password(user)

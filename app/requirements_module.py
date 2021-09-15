@@ -1,10 +1,13 @@
-class RequirementsClass:
+import input
 
-    def __init__(self, first_name, last_name, date_of_birth, password):
-        self.fname = first_name
-        self.lname = last_name
-        self.dob = date_of_birth
-        self.password = password
+class RequirementsClass(input.Inputclass):
+
+    def __init__(self):
+        super().__init__()
+        #self.fname = first_name
+        #self.lname = last_name
+        #self.dob = date_of_birth
+        #self.password = password
 
 
     def check_length_of_password(self):
