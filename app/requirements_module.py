@@ -5,13 +5,10 @@ import json
 # with open('json_storage/requirements.json', 'r') as file:
 #     req = json.load(file)
 
-class RequirementsClass:
+class RequirementsClass(input.Inputclass):
 
-    def __init__(self, first_name, last_name, date_of_birth, password):
-        self.fname = first_name
-        self.lname = last_name
-        self.dob = date_of_birth
-        self.password = password
+    def __init__(self):
+        super().__init__()
 
 
     def check_length_of_password(self):
@@ -98,7 +95,7 @@ class RequirementsClass:
 
     def check_first_name_in_password(self):
         fname_check = True
-        if self.fname in self.password:
+        if self.fname.lower() in self.password:
             print("Can't include your name in your password! Please lease type in a different password or generate one automatically")
             fname_check = False
 
@@ -107,36 +104,37 @@ class RequirementsClass:
 
     def check_last_name_in_password(self):
         lname_check = True
-        if self.lname in self.password:
+        if self.lname.lower() in self.password:
             print("Can't include your last name in your password! Please lease type in a different password or generate one automatically")
             last_name = False
 
         return lname_check
 
 
+    #def check_date_of_birth_in_password(self):
+    #    birthday_check = True
+    #    dob_in_password = False
+    #    date_of_birth_array = ["01", "05", "1800"]
+    #    for date in date_of_birth_array:
+    #        if date in self.password:
+    #            dob_in_password = True
+    #            birthday_check = False
+#
+#        if dob_in_password == True:
+#            print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
+#
+#        return birthday_check
+
+
     def check_date_of_birth_in_password(self):
-        birthday_check = True
-        dob_in_password = False
-        date_of_birth_array = ["01", "05", "1800"]
-        for date in date_of_birth_array:
-            if date in self.password:
-                dob_in_password = True
-                birthday_check = False
 
-        if dob_in_password == True:
+
+        date_of_birth_array = self.date_of_birth
+        full_date = date_of_birth_array[0]+date_of_birth_array[1]+date_of_birth_array[2]
+        half_date = date_of_birth_array[1]+date_of_birth_array[2]
+        year = date_of_birth_array[2]
+        if full_date in self.password or half_date in self.password or year in self.password:
             print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
-
-        return birthday_check
-
-
-    # def check_date_of_birth_in_password(self):
-    #     #date_of_birth_array = ["01", "05", "1800"]
-    #     date_of_birth_array = self.date_of_birth
-    #     full_date = date_of_birth_array[0]+date_of_birth_array[1]+date_of_birth_array[2]
-    #     half_date = date_of_birth_array[1]+date_of_birth_array[2]
-    #     year = date_of_birth_array[2]
-    #     if full_date in self.password or half_date in self.password or year in self.password:
-    #         print("Can't include your date of birth in your password! Please lease type in a different password or generate one automatically")
 
 
 def main():

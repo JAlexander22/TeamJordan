@@ -25,20 +25,35 @@ if __name__ == "__main__":
         input.Inputclass.set_password(user,password)
 #-----------------------------------ADD the CHeCKS ON PASSWORD -------------------------------------------------------------------------------
         print("check len")
-        requirements_module.RequirementsClass.check_length_of_password(user)
+        length_token = requirements_module.RequirementsClass.check_length_of_password(user)
         print("check fname")
-        requirements_module.RequirementsClass.check_first_name_in_password(user)
+        fname_token = requirements_module.RequirementsClass.check_first_name_in_password(user)
         print("check lname")
-        requirements_module.RequirementsClass.check_last_name_in_password(user)
+        lname_token = requirements_module.RequirementsClass.check_last_name_in_password(user)
         print("check birthday")
-        requirements_module.RequirementsClass.check_date_of_birth_in_password(user)
+        birthday_tokaen = requirements_module.RequirementsClass.check_date_of_birth_in_password(user)
 
+        print("chack numbers")
+        number_token = requirements_module.RequirementsClass.check_numbers_in_password(user)
+        print("Check symbols")
+        symbol_token = requirements_module.RequirementsClass.check_symbols_in_password(user)
+        print("check letters")
+        letter_token = requirements_module.RequirementsClass.check_characters_in_password(user)
 #------------------------------------------------Print out the results------------------------------------------------------------------------
-        #result_token.Token_results.length_check(token)
-        #result_token.Token_results.fname_check(token,user.fname)
-        #result_token.Token_results.lname_check(token,user.lname)
-        #result_token.Token_results.birthday_check(token)
+        result_token.Token_results.length_check(length_token)
+        result_token.Token_results.fname_check(fname_token,user.fname)
+        result_token.Token_results.lname_check(lname_token,user.lname)
+        result_token.Token_results.birthday_check(birthday_token)
+        result_token.Token_results.number_check(number_token)
+        result_token.Token_results.symbol_check(symbol_token)
+        result_token.Token_results.letter_check(letter_token)
 
+
+
+#-----------------------------------------SAVE TO A FILE__________________________________________________________________________
+
+
+#----------------------------------------EXITING OR NOT--------------------------------------------------------------
         token = result_token.Token_results.are_you_done()
 #------------------------------------------OUT oF LOOP GOODBYE ---------------------------------------------------------------------------------
     print(f"Thank you for using the password checker {user.fname}")
