@@ -8,8 +8,8 @@ class Generate_pass:
 
         while True:
             try:
-                user = str(input('Do you want to generate a random password? Yes/No: '))
-                if user == 'Yes':
+                user = str(input('Do you want to generate a random password or input one? Generate/Input: '))
+                if user == 'Generate':
                     while True:
                         characters = string.ascii_letters + string.digits + string.punctuation
                         password = ''.join(random.choice(characters) for i in range(8))
@@ -20,11 +20,10 @@ class Generate_pass:
                         else:
                             print('Your new password is ', password)
                             return password
-                            
+
 
                     break
-                elif user == 'No':
-                    print("No pass generated")
+                elif user == 'Input':
                     break
                 else:
                     print ("Yes or No")

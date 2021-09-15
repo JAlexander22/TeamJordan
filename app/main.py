@@ -8,4 +8,7 @@ if __name__ == "__main__":
     token = True
 
     while token ==True:
+
         password = generate_passoword.Generate_pass.generate()
+        if password == None:
+            password = input.Inputclass.input_password()
