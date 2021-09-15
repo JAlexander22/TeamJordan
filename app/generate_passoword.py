@@ -4,7 +4,7 @@ import string
 # get random password pf length 8 with letters, digits, and symbols
 class Generate_pass:
 
-    def generate(self):
+    def generate():
 
         while True:
             try:
@@ -19,7 +19,9 @@ class Generate_pass:
                             continue
                         else:
                             print('Your new password is ', password)
-                            break
+                            return password
+                            
+
                     break
                 elif user == 'No':
                     print("No pass generated")
@@ -29,5 +31,6 @@ class Generate_pass:
             except:
                 continue
 
-Password_Gen = Generate_pass()
-Password_Gen.generate()
+if __name__ == "__main__":
+    Password_Gen = Generate_pass()
+    Password_Gen.generate()
