@@ -1,0 +1,11 @@
+The password checked was Password123 
+Your password has PASSED the length check
+The password FAILED the first name check. Please do not include d
+The password FAILED the last name check. Please do not include d
+Your password has PASSED the birthday check
+Your password has PASSED the number check
+The password FAILED the symbol check. Please include at least one symbol
+Your password has PASSED the letter check
+You password has FAILED the common password check, please choose a more obscure password
+
+ ----------------------------------------------------------------------------------------------- 

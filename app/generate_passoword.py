@@ -26,7 +26,7 @@ class Generate_pass:
                 elif user == 'Input':
                     break
                 else:
-                    print ("Yes or No")
+                    print ("Input or Generate")
             except:
                 continue
 
