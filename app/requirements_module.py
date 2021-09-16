@@ -121,7 +121,7 @@ class RequirementsClass(input.Inputclass):
 
     def check_first_name_in_password(self):
         fname_check = True
-        if self.fname.lower() in self.password:
+        if self.fname.lower() in self.password.lower():
             #print("Can't include your name in your password! Please lease type in a different password or generate one automatically")
             fname_check = False
             return fname_check
@@ -130,7 +130,7 @@ class RequirementsClass(input.Inputclass):
 
     def check_last_name_in_password(self):
         lname_check = True
-        if self.lname.lower() in self.password:
+        if self.lname.lower() in self.password.lower():
             #print("Can't include your last name in your password! Please lease type in a different password or generate one automatically")
             lname_check = False
 
