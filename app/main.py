@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
 
         input.Inputclass.set_password(user,password)
-        
+
 #-----------------------------------ADD the CHeCKS ON PASSWORD -------------------------------------------------------------------------------
         #print("check len")
         length_token = requirements_module.RequirementsClass.check_length_of_password(user)
@@ -48,7 +48,9 @@ if __name__ == "__main__":
         checks.append(result_token.Token_results.number_check(number_token))
         checks.append(result_token.Token_results.symbol_check(symbol_token))
         checks.append(result_token.Token_results.letter_check(letter_token))
+        checks.append(requirements_module.RequirementsClass.check_capitol_in_password(user.password))
         checks.append(database.check_password_in_db(user.password))
+
 
 
 
