@@ -38,3 +38,14 @@ Your password has PASSED the symbol check
 Your password has PASSED the letter check
 
  -----------------------------------------------------------------------------------------------
+The password checked was Password1 
+Your password has PASSED the length check
+Your password has PASSED the first name check
+Your password has PASSED the last name check
+Your password has PASSED the birthday check
+Your password has PASSED the number check
+The password FAILED the symbol check. Please include at least one symbol
+Your password has PASSED the letter check
+You password has FAILED the common password check, please choose a more obscure password
+
+ ----------------------------------------------------------------------------------------------- 
