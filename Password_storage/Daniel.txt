@@ -1,1 +1,40 @@
-This is a storage of tested passwords for: Daniel 
+The password checked was Daniel1997
+Your password has PASSED the length check
+Your password has PASSED the first name check
+Your password has PASSED the last name check
+The password FAILED the birthday check. Please do not include your birthday
+Your password has PASSED the number check
+The password FAILED the symbol check. Please include at least one symbol
+Your password has PASSED the letter check
+
+ -----------------------------------------------------------------------------------------------
+The password checked was p@^ybW~3
+Your password has PASSED the length check
+Your password has PASSED the first name check
+Your password has PASSED the last name check
+Your password has PASSED the birthday check
+Your password has PASSED the number check
+Your password has PASSED the symbol check
+Your password has PASSED the letter check
+
+ -----------------------------------------------------------------------------------------------
+The password checked was 1wx*D{e(
+Your password has PASSED the length check
+Your password has PASSED the first name check
+Your password has PASSED the last name check
+Your password has PASSED the birthday check
+Your password has PASSED the number check
+Your password has PASSED the symbol check
+Your password has PASSED the letter check
+
+ -----------------------------------------------------------------------------------------------
+The password checked was [E$~j`/H
+Your password has PASSED the length check
+Your password has PASSED the first name check
+Your password has PASSED the last name check
+Your password has PASSED the birthday check
+The password FAILED the number check. Please include at least one number
+Your password has PASSED the symbol check
+Your password has PASSED the letter check
+
+ -----------------------------------------------------------------------------------------------
