@@ -22,13 +22,14 @@ class File_writer:
         except Exception as e:
             print(e)
 
-    def save_file(name,password,s_array):
+    def save_file(name,password,s_array,mess):
         loop_token = True
         while loop_token == True:
             answ = input("Do you want to save to a file? Yes/No ")
             if answ == 'Yes':
                 loop_token = False
                 File_writer.write_file(name,f"The password checked was {password} \n")
+                File_writer.write_file(name,mess)
                 for item in s_array:
                     File_writer.write_file(name,item)
                     File_writer.write_file(name,"\n")

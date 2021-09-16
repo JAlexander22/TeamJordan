@@ -71,7 +71,18 @@ class RequirementsClass(input.Inputclass):
         print("Your password FAILED the captiol letter test, please include one capitol letter")
         return "Your password FAILED the captiol letter test, please include one capitol letter"
 
-        return charachter_check
+    def check_capitol_in_password_token(password):
+        list_of_characters = [                                    "A", "B", "C", "D", "E", "F", "G", "H", "I",
+                                "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+                                 "R", "T", "U", "V", "W", "X", "Y", "Z"]
+
+        for character in list_of_characters:
+            if character in password:
+
+                return True
+        
+        return False
+
 
     def check_numbers_in_password(self):
         number_check = False

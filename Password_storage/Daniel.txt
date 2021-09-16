@@ -49,3 +49,43 @@ Your password has PASSED the letter check
 You password has FAILED the common password check, please choose a more obscure password
 
  ----------------------------------------------------------------------------------------------- 
+The password checked was Daniel97 
+The password checked was daniel97 
+daniel97 is NOT SAFE, please choose another 
+Your password has PASSED the length check
+The password FAILED the first name check. Please do not include Daniel
+Your password has PASSED the last name check
+Your password has PASSED the birthday check
+Your password has PASSED the number check
+The password FAILED the symbol check. Please include at least one symbol
+Your password has PASSED the letter check
+Your password FAILED the captiol letter test, please include one capitol letter
+You password has PASSED the common password check
+
+ ----------------------------------------------------------------------------------------------- 
+The password checked was ,gV;2VhW 
+,gV;2VhW is NOT SAFE, please choose another 
+Your password has PASSED the length check
+Your password has PASSED the first name check
+Your password has PASSED the last name check
+Your password has PASSED the birthday check
+Your password has PASSED the number check
+The password FAILED the symbol check. Please include at least one symbol
+Your password has PASSED the letter check
+Your password PASSED the capitol letter test
+You password has PASSED the common password check
+
+ ----------------------------------------------------------------------------------------------- 
+The password checked was 1LFO/s@} 
+1LFO/s@} is SAFE 
+Your password has PASSED the length check
+Your password has PASSED the first name check
+Your password has PASSED the last name check
+Your password has PASSED the birthday check
+Your password has PASSED the number check
+Your password has PASSED the symbol check
+Your password has PASSED the letter check
+Your password PASSED the capitol letter test
+You password has PASSED the common password check
+
+ ----------------------------------------------------------------------------------------------- 

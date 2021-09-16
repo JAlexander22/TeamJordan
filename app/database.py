@@ -34,6 +34,16 @@ def check_password_in_db(password):
     else:
         print("You password has PASSED the common password check")
         return "You password has PASSED the common password check"
+def check_password_in_db_token(password):
+    conn = sqlite3.connect('Sq_database/common_passwords.db')
+    command = f"SELECT 1 FROM common_passwords WHERE COMMONPASSWORDS = '{password}\n'"
+    if conn.execute(command).fetchone():
+        print("You password has FAILED the common password check, please choose a more obscure password")
+        return False
+
+    else:
+        
+        return True
 
 
 #if __name__ == "__main__":
