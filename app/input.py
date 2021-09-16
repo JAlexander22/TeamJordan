@@ -17,15 +17,19 @@ class Inputclass:
 
     def check_str(inp_str):
         exit_loop = False
-
-        for element in inp_str:
-            if element.isdigit():
-                print("Please do not input numbers")
-                exit_loop = True
-            elif element == ' ':
-                print("Please do not input spaces in the name")
-                exit_loop = True
-        return exit_loop
+        if len(inp_str) <=2:
+            print("Please enter a name with 3 characters or more")
+            exit_loop = True
+            return exit_loop
+        else:
+            for element in inp_str:
+                if element.isdigit():
+                    print("Please do not input numbers")
+                    exit_loop = True
+                elif element == ' ':
+                    print("Please do not input spaces in the name")
+                    exit_loop = True
+            return exit_loop
 
     def check_pass(inp_pass):
         exit_loop = False
