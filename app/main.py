@@ -2,8 +2,7 @@ import input
 import requirements_module
 import generate_passoword
 import result_token
-
-
+import text_create
 
 
 
@@ -14,7 +13,7 @@ if __name__ == "__main__":
     user = input.Inputclass(input.Inputclass.input_fname(),input.Inputclass.input_lname(),input.Inputclass.input_birthday())
 
     token = True
-
+    text_create.File_writer.open_file(user.fname)
     while token ==True:
 #---------------------------------------------GET THE PASSWORD AND STORE IT AS password-------------------------------------------------------
         password = generate_passoword.Generate_pass.generate()
@@ -40,17 +39,19 @@ if __name__ == "__main__":
         #print("check letters")
         letter_token = requirements_module.RequirementsClass.check_characters_in_password(user)
 #------------------------------------------------Print out the results------------------------------------------------------------------------
-        result_token.Token_results.length_check(length_token)
-        result_token.Token_results.fname_check(fname_token,user.fname)
-        result_token.Token_results.lname_check(lname_token,user.lname)
-        result_token.Token_results.birthday_check(birthday_token)
-        result_token.Token_results.number_check(number_token)
-        result_token.Token_results.symbol_check(symbol_token)
-        result_token.Token_results.letter_check(letter_token)
+        checks = []
+        checks.append(result_token.Token_results.length_check(length_token))
+        checks.append(result_token.Token_results.fname_check(fname_token,user.fname))
+        checks.append(result_token.Token_results.lname_check(lname_token,user.lname))
+        checks.append(result_token.Token_results.birthday_check(birthday_token))
+        checks.append(result_token.Token_results.number_check(number_token))
+        checks.append(result_token.Token_results.symbol_check(symbol_token))
+        checks.append(result_token.Token_results.letter_check(letter_token))
 
 
 
 #-----------------------------------------SAVE TO A FILE__________________________________________________________________________
+        text_create.File_writer.save_file(user.fname,user.password,checks)
 
 
 #----------------------------------------EXITING OR NOT--------------------------------------------------------------
