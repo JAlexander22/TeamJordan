@@ -65,11 +65,11 @@ class RequirementsClass(input.Inputclass):
 
         for character in list_of_characters:
             if character in password:
-                print("Your password PASSED the capitol letter test")
-                return "Your password PASSED the capitol letter test"
+                print("Your password PASSED the capital letter test")
+                return "Your password PASSED the capital letter test"
 
-        print("Your password FAILED the captiol letter test, please include one capitol letter")
-        return "Your password FAILED the captiol letter test, please include one capitol letter"
+        print("Your password FAILED the capital letter test, please include one capital letter")
+        return "Your password FAILED the capital letter test, please include one capital letter"
 
     def check_capitol_in_password_token(password):
         list_of_characters = [                                    "A", "B", "C", "D", "E", "F", "G", "H", "I",
@@ -80,7 +80,7 @@ class RequirementsClass(input.Inputclass):
             if character in password:
 
                 return True
-        
+
         return False
 
 
