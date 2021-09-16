@@ -60,5 +60,6 @@ if __name__ == "__main__":
 
 #----------------------------------------EXITING OR NOT--------------------------------------------------------------
         token = result_token.Token_results.are_you_done()
+        
 #------------------------------------------OUT oF LOOP GOODBYE ---------------------------------------------------------------------------------
     print(f"Thank you for using the password checker {user.fname}")
