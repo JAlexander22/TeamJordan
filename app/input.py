@@ -1,3 +1,4 @@
+import re
 
 class Inputclass:
 #---------------------------------------------------------DEFINE OBJECT---------------------------------------------------------------
@@ -15,13 +16,27 @@ class Inputclass:
 
         return first_name
 
+
+    def check_splcharacter(test):
+
+        string_check= re.compile('=+-|£"[@_!#$%^&*()<>?/\|}{~:]')
+
+        # Pass the string in search function
+        if(string_check.search(test) == None):
+            return True
+
+        else:
+            print("String contains Special Characters.")
+            return False
+
+
     def check_str(inp_str):
         exit_loop = False
         if len(inp_str) <=2:
             print("Please enter a name with 3 characters or more")
             exit_loop = True
             return exit_loop
-        else:
+        elif Inputclass.check_splcharacter(inp_str) == True:
             for element in inp_str:
                 if element.isdigit():
                     print("Please do not input numbers")
@@ -29,6 +44,9 @@ class Inputclass:
                 elif element == ' ':
                     print("Please do not input spaces in the name")
                     exit_loop = True
+            return exit_loop
+        else:
+            exit_loop = True
             return exit_loop
 
     def check_pass(inp_pass):

@@ -89,3 +89,16 @@ Your password PASSED the capitol letter test
 You password has PASSED the common password check
 
  ----------------------------------------------------------------------------------------------- 
+The password checked was ALGnLmSO9>bT 
+ALGnLmSO9>bT is NOT SAFE, please choose another 
+Your password has PASSED the length check
+Your password has PASSED the first name check
+Your password has PASSED the last name check
+Your password has PASSED the birthday check
+Your password has PASSED the number check
+The password FAILED the symbol check. Please include at least one symbol
+Your password has PASSED the letter check
+Your password PASSED the capital letter test
+You password has PASSED the common password check
+
+ ----------------------------------------------------------------------------------------------- 

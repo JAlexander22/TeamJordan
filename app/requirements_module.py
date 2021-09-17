@@ -26,7 +26,7 @@ class RequirementsClass(input.Inputclass):
         symbols_in_password = False
         list_of_symbols = [
                             "`", "~", "!", "@", "#", "$", "%",
-                            "^", "&", "*", "(", ")", "–", "_", "=", "+"]
+                            "^", "&", "*", "(", ")", "–", "_", "=", "+","<",">","+","=","£"]
 
         for symbol in list_of_symbols:
             if symbol in self.password:
@@ -34,9 +34,9 @@ class RequirementsClass(input.Inputclass):
                 symbol_check = True
 
         if symbols_in_password == False:
-            print("You need to have at least one symbol in your password")
+            #print("You need to have at least one symbol in your password")
 
-        return symbol_check
+            return symbol_check
 
 
     def check_characters_in_password(self):
