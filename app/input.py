@@ -19,14 +19,14 @@ class Inputclass:
 
     def check_splcharacter(test):
 
-        string_check= re.compile('=+-|£"[@_!#$%^&*()<>?/\|}{~:]')
+        string_check= re.compile('[@_!#$%^&*()<>?/\|}{~:]')
 
         # Pass the string in search function
         if(string_check.search(test) == None):
             return True
 
         else:
-            print("String contains Special Characters.")
+            #print("String contains Special Characters.")
             return False
 
 
@@ -45,9 +45,11 @@ class Inputclass:
                     print("Please do not input spaces in the name")
                     exit_loop = True
             return exit_loop
-        else:
+        elif Inputclass.check_splcharacter(inp_str) == False:
+            print("Please do not input special characters")
             exit_loop = True
             return exit_loop
+        return exit_loop
 
     def check_pass(inp_pass):
         exit_loop = False
